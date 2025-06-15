@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.AD.U3</groupId>
+    <artifactId>AD-Unidad-3-hibernate-Ejercicios</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <!-- aquí irían cada uno de los ejercicios, uno por módulo -->
+
+        <module>Ejercicio301</module>
+        <module>Ejercicio302</module>
+        <module>Ejercicio303</module>
+        <module>Ejercicio304</module>
+        <module>Ejercicio305</module>
+        <module>Ejercicio306</module>
+        <module>Ejercicio307</module>
+        <module>Ejercicio308</module>
+        <module>Ejercicio309</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+<!--    Centralizar versiones con <dependencyManagement>-->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Hibernate core -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>6.5.2.Final</version>
+            </dependency>
+            <!-- MySQL driver -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.22</version>
+            </dependency>
+            <!-- JPA API -->
+            <dependency>
+                <groupId>jakarta.persistence</groupId>
+                <artifactId>jakarta.persistence-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <!-- Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.36</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Compiler plugin -->
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.10.1</version>
+                    <configuration>
+                        <source>11</source>
+                        <target>11</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
